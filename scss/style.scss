@@ -1,0 +1,147 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #25334d;
+}
+
+.profile-container{
+    width: 70px;
+    margin: 100px auto;
+
+    .profile{
+        img{
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        &:hover{
+            .info{
+                display: flex;
+                animation: show .5s ease;
+            }
+        }
+        
+        .info{
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            width: 340px;
+            min-width: 300px;
+            background-color: #222;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 0 5px rgba(255, 255, 255, .2);
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+    
+                img{
+                    width: 50px;
+                }
+    
+                button{
+                    min-width: 100px;
+                    padding: 10px;
+                    border-radius: 20px;
+                    background-color: white;
+                    color: black;
+                    border: none;
+                    font-weight: bold;
+                    cursor: pointer;
+    
+                    &:hover{
+                        background-color: #eee;
+                    }
+                }
+            }
+
+            .user-info{
+                padding: 10px 0;
+
+                .name{
+                    font-weight: bold;
+                }
+
+                .username{
+                    color: #aaa;
+                }
+            }
+
+            .description{
+                padding: 10px 0 2px 0;
+                flex: 1;
+
+                a{
+                    color: #008cff;
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .followers-container{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 10px 0;
+
+                .number{
+                    color: white;
+                    font-weight: bold;
+                }
+
+                a{
+                    color: #aaa;
+                }
+            }
+
+            .other{
+                padding: 10px 0;
+
+                a{
+                    display: flex;
+                    color: #777;
+
+                    .photos{
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: start;
+                        margin-right: 30px;
+
+                        img{
+                            width: 32px;
+                            height: 32px;
+                            border: solid 4px #222;
+                            margin-right: -20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes show {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+}

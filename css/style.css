@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #25334d;
+}
+
+.profile-container {
+  width: 70px;
+  margin: 100px auto;
+}
+.profile-container .profile img {
+  width: 70px;
+  border-radius: 50%;
+}
+.profile-container .profile a {
+  color: white;
+  text-decoration: none;
+}
+.profile-container .profile a:hover {
+  text-decoration: underline;
+}
+.profile-container .profile:hover .info {
+  display: flex;
+  -webkit-animation: show 0.5s ease;
+          animation: show 0.5s ease;
+}
+.profile-container .profile .info {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  width: 340px;
+  min-width: 300px;
+  background-color: #222;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+.profile-container .profile .info .header {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-container .profile .info .header img {
+  width: 50px;
+}
+.profile-container .profile .info .header button {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.profile-container .profile .info .header button:hover {
+  background-color: #eee;
+}
+.profile-container .profile .info .user-info {
+  padding: 10px 0;
+}
+.profile-container .profile .info .user-info .name {
+  font-weight: bold;
+}
+.profile-container .profile .info .user-info .username {
+  color: #aaa;
+}
+.profile-container .profile .info .description {
+  padding: 10px 0 2px 0;
+  flex: 1;
+}
+.profile-container .profile .info .description a {
+  color: #008cff;
+  text-decoration: none;
+}
+.profile-container .profile .info .description a:hover {
+  text-decoration: underline;
+}
+.profile-container .profile .info .followers-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+}
+.profile-container .profile .info .followers-container .number {
+  color: white;
+  font-weight: bold;
+}
+.profile-container .profile .info .followers-container a {
+  color: #aaa;
+}
+.profile-container .profile .info .other {
+  padding: 10px 0;
+}
+.profile-container .profile .info .other a {
+  display: flex;
+  color: #777;
+}
+.profile-container .profile .info .other a .photos {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin-right: 30px;
+}
+.profile-container .profile .info .other a .photos img {
+  width: 32px;
+  height: 32px;
+  border: solid 4px #222;
+  margin-right: -20px;
+}
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
